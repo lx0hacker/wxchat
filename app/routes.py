@@ -6,7 +6,7 @@ from app.tuling import tuling
 
 @app.route('/')
 def index():
-    return '<h1>Hello World!</h1>'
+    return render_template('index.html')
 
 @app.route('/weixin',methods=['GET','POST'])
 def auto_reply():
