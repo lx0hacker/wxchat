@@ -11,4 +11,4 @@ def index():
 @app.route('/weixin',methods=['GET','POST'])
 def auto_reply():
     code,text = tuling('厦门天气')
-    return render_template('index.html'weather=text)
+    return render_template('index.html',weather=text)
