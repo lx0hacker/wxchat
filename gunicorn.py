@@ -8,7 +8,7 @@ import multiprocessing
 bind = '127.0.0.1:8000'      #绑定ip和端口号
 bind = 'unix:/tmp/wxchat.socket'
 backlog = 512                #监听队列
-chdir = '/home/test/server/bin'  #gunicorn要切换到的目的工作目录
+chdir = '~/wxchat'  #gunicorn要切换到的目的工作目录
 timeout = 30      #超时
 worker_class = 'gevent' #使用gevent模式，还可以使用sync 模式，默认的是sync模式
 
