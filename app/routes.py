@@ -13,10 +13,10 @@ def index():
 def auto_reply():
     if request.method == 'GET':
         token = app.config['TOKEN']
-        signature = request.args.get('signature','')
-        timestamp = request.args.get('timestamp','')
-        nonce = request.args.get('nonce','')
-        echostr = request.args.get('echostr','')
+        signature = request.args.get('signature')
+        timestamp = request.args.get('timestamp')
+        nonce = request.args.get('nonce')
+        echostr = request.args.get('echostr')
         data = [timestamp,nonce,token]
         data = data.sort()
         data = ''.join(data)
