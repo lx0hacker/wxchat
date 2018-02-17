@@ -3,7 +3,7 @@
 import requests
 import json
 import time
-from xml.etree.ElementTree import ET
+import xml.etree.ElementTree as ET
 from app import app
 
 def xmlParse(web_data):
