@@ -48,7 +48,6 @@ class ReplyMsg(object):
 
 class ReplyTextMsg(ReplyMsg):
     def __init__(self,toUserName,fromUserName,content):
-        Msg.__init__(self, xmlData)
         self.__dict = dict()
         self.__dict['ToUserName'] = toUserName
         self.__dict['FromUserName'] = fromUserName
