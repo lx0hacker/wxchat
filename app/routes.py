@@ -20,7 +20,7 @@ def auto_reply():
         data = [timestamp,nonce,token]
         data.sort()
         data = ''.join(data)
-        if hashlib.sha1(data).hexdigest() == signature:
+        if hashlib.sha1(data.encode('utf-8')).hexdigest() == signature:
             return make_response(echostr)
     else:
         webData = request.stream.read()

@@ -23,5 +23,5 @@ daemon=True
 loglevel = 'info'
 
 bind = "%s:%s" % ("127.0.0.1", 8000)
-errorlog = '%s/logs/%s_error.log' % (path_of_current_dir, _file_name)
-accesslog = '%s/logs/%s_access.log' % (path_of_current_dir, _file_name)
+errorlog = '%s/logs/gunicorn_error.log' % (path_of_current_dir)
+accesslog = '%s/logs/gunicorn_access.log' % (path_of_current_dir)
