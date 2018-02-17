@@ -30,9 +30,10 @@ def auto_reply():
             fromUser = messageClass.FromUserName
             code,content = tuling(messageClass.Content)
             reply_message = ReplyTextMsg(toUser,fromUser,content)
-            return reply_message.send()
+            response = reply_message.send()
+            return make_response(response)
         else:
             print('暂时不处理......')
-            return 'success'
+            return make_response('success')
 
 
