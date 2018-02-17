@@ -19,6 +19,8 @@ threads = 2 #指定每个进程开启的线程数
 path_of_current_file = os.path.abspath(__file__)
 path_of_current_dir = os.path.split(path_of_current_file)[0]
 _file_name = os.path.basename(__file__)
+chdir = path_of_current_dir
+
 pidfile = '%s/run/%s.pid' % (path_of_current_dir, _file_name)
 access_log_format = '%(t)s %(p)s %(h)s "%(r)s" %(s)s %(L)s %(b)s %(f)s" "%(a)s"'    #设置gunicorn访问日志格式，错误日志无法设置
 errorlog = '%s/logs/%s_error.log' % (path_of_current_dir, _file_name)
