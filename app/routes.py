@@ -18,7 +18,7 @@ def auto_reply():
         nonce = request.args.get('nonce')
         echostr = request.args.get('echostr')
         data = [timestamp,nonce,token]
-        data = data.sort()
+        data.sort()
         data = ''.join(data)
         if hashlib.sha1(data).hexdigest() == signature:
             return make_response(echostr)
