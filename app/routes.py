@@ -26,8 +26,8 @@ def auto_reply():
         webData = request.stream.read()
         messageClass = xmlParse(webData)
         if isinstance(messageClass,ReceiveMsg) and messageClass.MsgType == 'text':
-            toUser = messageClass.ToUserName
-            fromUser = messageClass.FromUserName
+            toUser = messageClass.FromUserName
+            fromUser = messageClass.ToUserName
             code,content = tuling(messageClass.Content)
             reply_message = ReplyTextMsg(toUser,fromUser,content)
             response = reply_message.send()
