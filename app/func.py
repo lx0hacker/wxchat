@@ -51,6 +51,7 @@ class ReplyTextMsg(ReplyMsg):
         self.__dict = dict()
         self.__dict['ToUserName'] = toUserName
         self.__dict['FromUserName'] = fromUserName
+        self.__dict['CreateTime'] = int(time.time())
         self.__dict['Content'] = content
     def send(self):
         XmlForm = """
